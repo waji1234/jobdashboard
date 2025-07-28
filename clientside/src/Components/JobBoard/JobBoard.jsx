@@ -1,11 +1,10 @@
 import React from "react";
 import JobColumn from "../JobColumn/JobColumn";
 import ListAltIcon from "@mui/icons-material/ListAlt";
-import InprogressIcon from '../../assets/svgs'
 import PauseCircleOutlineOutlinedIcon from '@mui/icons-material/PauseCircleOutlineOutlined';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import ArchiveSharpIcon from '@mui/icons-material/ArchiveSharp';
-
+import DashboardIcon from '@mui/icons-material/Dashboard';
 const dummyTasks = [
   {
     title: "UX Research",
@@ -39,7 +38,7 @@ const JobBoard = () => {
 
       backgroundcolor: "#3A98EB1A",
       tasks: dummyTasks,
-      icon: InprogressIcon,
+      icon: DashboardIcon,
     },
     {
       title: "Review",

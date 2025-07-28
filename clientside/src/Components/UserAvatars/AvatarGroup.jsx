@@ -1,8 +1,8 @@
 import React from 'react';
-import { Avatar, Box, Typography } from '@mui/material';
+import { Avatar, Box } from '@mui/material';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
-const CustomAvatarGroup = () => {
+const CustomAvatarGroup = ({ useradditionbutton }) => {
   const avatars = [
     'https://randomuser.me/api/portraits/women/1.jpg',
     'https://randomuser.me/api/portraits/women/2.jpg',
@@ -13,7 +13,6 @@ const CustomAvatarGroup = () => {
   return (
     <Box display="flex" alignItems="center">
       <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-        {/* User avatars */}
         {avatars.map((src, index) => (
           <Avatar
             key={index}
@@ -29,7 +28,6 @@ const CustomAvatarGroup = () => {
           />
         ))}
 
-        {/* +7 Avatar */}
         <Avatar
           sx={{
             width: 40,
@@ -47,21 +45,22 @@ const CustomAvatarGroup = () => {
           +7
         </Avatar>
 
-        {/* Add User Avatar */}
-        <Avatar
-          sx={{
-            width: 40,
-            height: 40,
-            bgcolor: '#26A69A',
-            color: '#fff',
-            border: '2px solid white',
-            cursor: 'pointer',
-            zIndex: 0,
-            boxShadow: 1,
-          }}
-        >
-          <PersonAddAlt1Icon fontSize="small" />
-        </Avatar>
+        {useradditionbutton === true && (
+          <Avatar
+            sx={{
+              width: 40,
+              height: 40,
+              bgcolor: '#26A69A',
+              color: '#fff',
+              border: '2px solid white',
+              cursor: 'pointer',
+              zIndex: 0,
+              boxShadow: 1,
+            }}
+          >
+            <PersonAddAlt1Icon fontSize="small" />
+          </Avatar>
+        )}
       </Box>
     </Box>
   );
