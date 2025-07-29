@@ -2,14 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "./layouts/DashboardLayout";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import Clients from "./pages/Clients/Clients";
-import Home from "./pages/Home";
+import TeamMeMberProfile from "./pages/Teammemberprofile/TeamMeMberProfile";
 
 
 const router = createBrowserRouter([
-    {
-    path: '/',
-    element: <Home/>,
-    },
     {
         path:'/jobproposaldashboard',
         element:<DashboardLayout />,
@@ -26,6 +22,10 @@ const router = createBrowserRouter([
               {
               path:'proposals',
               element:<DashboardPage />
+            },
+            {
+              path:'profile',
+              element:<TeamMeMberProfile />
             },
         ]
     }

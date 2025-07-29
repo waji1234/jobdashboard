@@ -13,6 +13,7 @@ import chatIcon from '../assets/message-chat-circle.svg'
 import calenderIcon from '../assets/calendar.svg'
 import ReportIcon from '../assets/reports.svg'
 import InvoiceIcon from '../assets/invoice.svg'
+import folderLogo from '../assets/folder-logo.svg'
 
 export const metricData = [
   {
@@ -327,9 +328,35 @@ export const navItems = [
   { label: "Clients", icon: clientIcon , path: "clients" },
   { label: "Proposals", icon: proposalIcon, path: "proposals" },
   { label: "Projects", icon: projectIcon , path: "/projects" },
+  { label: "Profile", icon: clientIcon , path: "profile" },
   { label: "Team", icon: TeamIcon, path: "/team" },
   { label: "Chat", icon: chatIcon, path: "/chat" },
   { label: "Calendar", icon: calenderIcon, path: "/calendar" },
   { label: "Report", icon: ReportIcon , path: "/report" },
   { label: "Invoice", icon: InvoiceIcon , path: "/invoice" },
+];
+
+export const userProfileData = [
+  {
+    id: 1,
+    title: 'Current Salary',
+    price: '2000',
+    cycle: 'Per month',
+    icon: folderLogo ,
+  },
+  {
+    id: 2,
+    title: 'YTD Earnings',
+    price: '45000',
+    cycle: 'vs last month',
+    icon: folderLogo,
+    percentage:8,
+  },
+  {
+    id: 3,
+    title: 'Total Deduction',
+    price: '2000',
+    cycle: 'This month',
+    icon: folderLogo,
+  },
 ];
